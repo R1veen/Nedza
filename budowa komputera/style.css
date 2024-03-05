@@ -3,8 +3,17 @@ background-color: #1a1e3b;
 
 }
 
+h1 {
+}
+color: white;
+font-family: Arial; 
 
 p {
+color: white;
+font-family: Arial; 
+}
+
+a {
 color: white;
 font-family: Arial; 
 }

@@ -3,11 +3,16 @@ background-color: black;
 margin: 50px;
 }
 
+h2 {
+font-family: Arial;
+font-size: 50px;
+color: white;
+}
+
 p {
 font-family: Arial;
 font-size: 20px;
 color: white;
-text-align: center;
 }
 
 a {

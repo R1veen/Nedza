@@ -1,6 +1,9 @@
 body {
-background-color: black;
-margin: 50px;
+background-color: rgb(251, 207, 40);
+background-image: radial-gradient(circle, rgba(85, 90, 98, 1) 0%, rgba(47, 48, 55, 1) 70%);
+background-size: auto;
+background-position: center 75%;
+background-repeat: repeat;
 }
 
 h2 {

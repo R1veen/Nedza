@@ -1,26 +1,50 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: #fff;
   padding: 20px;
+  animation: backgroundAnimation 10s ease infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .witaj {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
 }
 
 p {
-  color: #666;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
 }
 
 a {
-  color: #007bff;
+  color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #f8b400;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

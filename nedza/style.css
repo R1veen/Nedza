@@ -5,8 +5,8 @@ body, html {
 }
 
 #container {
-  width: 80%; /* Szerokość kontenera */
-  margin: 0 auto; /* Wyśrodkowanie kontenera */
+  width: 80%;
+  margin: 0 auto;
   border: 1px solid black;
 }
 
@@ -19,7 +19,7 @@ header {
 }
 
 #logo img {
-  width: 80px; /* Dostosowano rozmiar logo */
+  width: 80px;
   height: auto;
   display: inline-block;
   vertical-align: middle;

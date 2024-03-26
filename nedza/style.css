@@ -58,13 +58,13 @@ nav ul li a:hover {
 #left {
   width: 25%;
   float: left;
-  background: #fff;
+  background: #3f5a73;
 }
 
 #main {
   width: 75%;
   float: left;
-  background: #fff;
+  background: #4d6d8c;
 }
 
 p {

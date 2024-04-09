@@ -49,9 +49,12 @@
       <button onclick="playGame('nożyce')">Nożyce</button>
       
       <p id="result"></p>
+      <p>Gracz: <span id="playerScore">0</span> | Komputer: <span id="computerScore">0</span></p>
     </div>
       
     <script>
+      let playerScore = 0;
+      let computerScore = 0;
     function playGame(playerChoice) {
       const choices = ['papier', 'kamień', 'nożyce'];
       const computerChoice = choices[Math.floor(Math.random() * choices.length)];

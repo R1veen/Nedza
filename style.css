@@ -27,15 +27,20 @@ p {
   animation: fadeInUp 1s ease;
 }
 
-a {
-  color: #fff;
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #8dc3f2;
+.button:hover {
+  background-color: #45a049;
 }
 
 @keyframes fadeInUp {

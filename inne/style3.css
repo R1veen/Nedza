@@ -1,0 +1,5 @@
+.balloon {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}

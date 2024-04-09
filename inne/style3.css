@@ -3,3 +3,25 @@
   cursor: pointer;
   transition: transform 0.2s ease-out;
 }
+
+
+ #follower {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+
+keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .swinging-text {
+    animation: swing 2s infinite;
+  }
+
+

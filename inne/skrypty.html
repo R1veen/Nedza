@@ -53,29 +53,34 @@
     </div>
       
     <script>
-      let playerScore = 0;
-      let computerScore = 0;
-    function playGame(playerChoice) {
-      const choices = ['papier', 'kamień', 'nożyce'];
-      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-      
-      let result;
-      
-      if (playerChoice === computerChoice) {
-        result = 'Remis!';
-      } else if (
-        (playerChoice === 'papier' && computerChoice === 'kamień') ||
-        (playerChoice === 'kamień' && computerChoice === 'nożyce') ||
-        (playerChoice === 'nożyce' && computerChoice === 'papier')
-      ) {
-        result = 'Wygrałeś!';
-      } else {
-        result = 'Przegrałeś!';
-      }
-      
-      document.getElementById('result').innerText = `Komputer wybrał: ${computerChoice}. ${result}`;
-    }
-    </script>
+let playerScore = 0;
+let computerScore = 0;
+
+function playGame(playerChoice) {
+  const choices = ['papier', 'kamień', 'nożyce'];
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  
+  let result;
+  
+  if (playerChoice === computerChoice) {
+    result = 'Remis!';
+  } else if (
+    (playerChoice === 'papier' && computerChoice === 'kamień') ||
+    (playerChoice === 'kamień' && computerChoice === 'nożyce') ||
+    (playerChoice === 'nożyce' && computerChoice === 'papier')
+  ) {
+    result = 'Wygrałeś!';
+    playerScore++;
+  } else {
+    result = 'Przegrałeś!';
+    computerScore++;
+  }
+  
+  document.getElementById('result').innerText = `Komputer wybrał: ${computerChoice}. ${result}`;
+  document.getElementById('playerScore').innerText = playerScore;
+  document.getElementById('computerScore').innerText = computerScore;
+}
+</script>
 
         <button id="clickButton" onclick="incrementCounter()">Kliknij mnie!</button>
     <p>Liczba kliknięć: <span id="clickCount">0</span></p>

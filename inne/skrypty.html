@@ -10,7 +10,7 @@
   </head>
   
   <body>
-<!--     <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
       const balloons = document.querySelectorAll('.balloon');
       
@@ -28,7 +28,7 @@
     <div class="balloon" style="top: 50px; left: 50px;">🎈</div>
     <div class="balloon" style="top: 100px; left: 150px;">🎈</div>
     <div class="balloon" style="top: 150px; left: 250px;">🎈</div>
-   -->
+  
   
     <div id="follower"></div>
     
@@ -42,14 +42,15 @@
 
     <h1 class="swinging-text">Witaj na mojej stronie!</h1>
 
-
-    <h2>Wybierz jedną opcję:</h2>
-    <button onclick="playGame('papier')">Papier</button>
-    <button onclick="playGame('kamień')">Kamień</button>
-    <button onclick="playGame('nożyce')">Nożyce</button>
-    
-    <p id="result"></p>
-
+    <div style="text-align: center;">
+      <h2>Wybierz jedną opcję:</h2>
+      <button onclick="playGame('papier')">Papier</button>
+      <button onclick="playGame('kamień')">Kamień</button>
+      <button onclick="playGame('nożyce')">Nożyce</button>
+      
+      <p id="result"></p>
+    </div>
+      
     <script>
     function playGame(playerChoice) {
       const choices = ['papier', 'kamień', 'nożyce'];
@@ -73,22 +74,22 @@
     }
     </script>
 
-    <button id="clickButton" onclick="incrementCounter()">Kliknij mnie!</button>
-<p>Liczba kliknięć: <span id="clickCount">0</span></p>
+        <button id="clickButton" onclick="incrementCounter()">Kliknij mnie!</button>
+    <p>Liczba kliknięć: <span id="clickCount">0</span></p>
+    
+    <script>
+    let clickCount = 0;
+    
+    function incrementCounter() {
+      clickCount++;
+      document.getElementById('clickCount').innerText = clickCount;
+    }
+    </script>
 
-<script>
-let clickCount = 0;
 
-function incrementCounter() {
-  clickCount++;
-  document.getElementById('clickCount').innerText = clickCount;
-}
-</script>
-
-
-    <div class="emoji" style="top: 50px; left: 50px; font-size: 36px;">😄</div>
-<div class="emoji" style="top: 100px; left: 150px; font-size: 36px;">😆</div>
-<div class="emoji" style="top: 150px; left: 250px; font-size: 36px;">😎</div>
+    <div class="emoji" style="top: 50px; right: 50px; font-size: 36px;">😄</div>
+    <div class="emoji" style="top: 100px; right: 150px; font-size: 36px;">😆</div>
+    <div class="emoji" style="top: 150px; right: 250px; font-size: 36px;">😎</div>
 
   </body>
 </html>

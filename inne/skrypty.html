@@ -8,104 +8,39 @@
     <title> skrypty </title>
     <link rel="stylesheet" href="style3.css">
   </head>
-<style>
-.balloon {
-  position: absolute;
-  cursor: pointer;
-  transition: transform 0.2s ease-out;
-}
-</style>
-</head>
-<body>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const balloons = document.querySelectorAll('.balloon');
   
-  balloons.forEach(balloon => {
-    balloon.addEventListener('mouseover', () => {
-      balloon.style.transform = 'scale(1.5)';
+  <body>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const balloons = document.querySelectorAll('.balloon');
+      
+      balloons.forEach(balloon => {
+        balloon.addEventListener('mouseover', () => {
+          balloon.style.transform = 'scale(1.5)';
+        });
+        balloon.addEventListener('mouseout', () => {
+          balloon.style.transform = 'scale(1)';
+        });
+      });
     });
-    balloon.addEventListener('mouseout', () => {
-      balloon.style.transform = 'scale(1)';
+    </script>
+
+    <div class="balloon" style="top: 50px; left: 50px;">𓆝</div>
+    <div class="balloon" style="top: 100px; left: 150px;">𓆟</div>
+    <div class="balloon" style="top: 150px; left: 250px;">𓆞</div>
+  
+  
+    <div id="follower"></div>
+    
+    <script>
+    document.addEventListener('mousemove', function(e) {
+      const follower = document.getElementById('follower');
+      follower.style.left = e.pageX + 'px';
+      follower.style.top = e.pageY + 'px';
     });
-  });
-});
-</script>
+    </script>
 
-<!-- Dodaj kilka baloników -->
-<div class="balloon" style="top: 50px; left: 50px;">🎈</div>
-<div class="balloon" style="top: 100px; left: 150px;">🎈</div>
-<div class="balloon" style="top: 150px; left: 250px;">🎈</div>
-
-</body>
+    <h1 class="swinging-text">Witaj na mojej stronie!</h1>
+  
+  </body>
 </html>
-```
-
-2. **Kursor podążający za użytkownikiem:**
-   Ten skrypt powoduje, że element na stronie podąża za kursorem użytkownika.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kursor podążający za użytkownikiem</title>
-<style>
-#follower {
-  position: absolute;
-  background-color: red;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-</style>
-</head>
-<body>
-
-<div id="follower"></div>
-
-<script>
-document.addEventListener('mousemove', function(e) {
-  const follower = document.getElementById('follower');
-  follower.style.left = e.pageX + 'px';
-  follower.style.top = e.pageY + 'px';
-});
-</script>
-
-</body>
-</html>
-```
-
-3. **Kołyszący się tekst:**
-   Ten skrypt tworzy efekt kołyszącego się tekstu.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kołyszący się tekst</title>
-<style>
-@keyframes swing {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(15deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.swinging-text {
-  animation: swing 2s infinite;
-}
-</style>
-</head>
-<body>
-
-<h1 class="swinging-text">Witaj na mojej stronie!</h1>
-
-</body>
-</html>
-```
-
-Te skrypty są jedynie zabawą i demonstrują różne efekty, które można osiągnąć przy użyciu JavaScriptu. Możesz je modyfikować i dostosowywać do swoich potrzeb!

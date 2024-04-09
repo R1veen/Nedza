@@ -41,6 +41,54 @@
     </script>
 
     <h1 class="swinging-text">Witaj na mojej stronie!</h1>
-  
+
+
+    <h2>Wybierz jedną opcję:</h2>
+    <button onclick="playGame('papier')">Papier</button>
+    <button onclick="playGame('kamień')">Kamień</button>
+    <button onclick="playGame('nożyce')">Nożyce</button>
+    
+    <p id="result"></p>
+
+    <script>
+    function playGame(playerChoice) {
+      const choices = ['papier', 'kamień', 'nożyce'];
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      
+      let result;
+      
+      if (playerChoice === computerChoice) {
+        result = 'Remis!';
+      } else if (
+        (playerChoice === 'papier' && computerChoice === 'kamień') ||
+        (playerChoice === 'kamień' && computerChoice === 'nożyce') ||
+        (playerChoice === 'nożyce' && computerChoice === 'papier')
+      ) {
+        result = 'Wygrałeś!';
+      } else {
+        result = 'Przegrałeś!';
+      }
+      
+      document.getElementById('result').innerText = `Komputer wybrał: ${computerChoice}. ${result}`;
+    }
+    </script>
+
+    <button id="clickButton" onclick="incrementCounter()">Kliknij mnie!</button>
+<p>Liczba kliknięć: <span id="clickCount">0</span></p>
+
+<script>
+let clickCount = 0;
+
+function incrementCounter() {
+  clickCount++;
+  document.getElementById('clickCount').innerText = clickCount;
+}
+</script>
+
+
+    <div class="emoji" style="top: 50px; left: 50px; font-size: 36px;">😄</div>
+<div class="emoji" style="top: 100px; left: 150px; font-size: 36px;">😆</div>
+<div class="emoji" style="top: 150px; left: 250px; font-size: 36px;">😎</div>
+
   </body>
 </html>

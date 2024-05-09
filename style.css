@@ -87,6 +87,23 @@ margin-top: 2%;
   text-align: center;
 }
 
+.button1 {
+  display: block;
+  background-color: #223bc9;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button1:hover {
+  background-color: #4058f5;
+}
+
 .button:hover {
   background-color: #ff6600;
 }
